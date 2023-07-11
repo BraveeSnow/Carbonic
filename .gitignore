@@ -1,14 +1,19 @@
 # Compiled class file
 *.class
 
+# Builds
+.gradle/
+build/
+
+# IntelliJ config
+.idea/
+
+# Minecraft directories
+run/
+run-data/
+
 # Log file
 *.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
 # Package Files #
 *.jar
