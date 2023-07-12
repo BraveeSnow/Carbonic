@@ -1,5 +1,6 @@
 package world.snows.forever.carbonic;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -17,7 +18,10 @@ public class Carbonic {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         LOGGER.info("Initializing Carbonic...");
+
         ItemRegistry.ITEM_REGISTRY.register(bus);
         CreativeTabRegistry.loadCreativeTabs(bus);
+
+        MinecraftForge.EVENT_BUS.register(this);
     }
 }
