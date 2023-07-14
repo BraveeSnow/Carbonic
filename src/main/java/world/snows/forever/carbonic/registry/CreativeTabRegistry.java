@@ -13,7 +13,7 @@ import world.snows.forever.carbonic.Carbonic;
 
 @Mod.EventBusSubscriber(modid = Carbonic.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CreativeTabRegistry {
-    private static final DeferredRegister<CreativeModeTab> TAB_REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Carbonic.MOD_ID);
+    public static final DeferredRegister<CreativeModeTab> TAB_REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Carbonic.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> CARBONIC_COMMON = TAB_REGISTRY.register("carbonic_common", () ->
             CreativeModeTab.builder().title(Component.translatable("itemGroup.carbonic_common")).build());
@@ -23,9 +23,5 @@ public class CreativeTabRegistry {
         if (event.getTab().equals(CARBONIC_COMMON.get())) {
             ItemRegistry.ITEM_REGISTRY.getEntries().forEach(event::accept);
         }
-    }
-
-    public static void loadCreativeTabs(IEventBus bus) {
-        TAB_REGISTRY.register(bus);
     }
 }

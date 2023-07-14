@@ -1,6 +1,11 @@
 {
+  "block.carbonic.halite_ore": "Галит Руда",
+
   "item.carbonic.bleach": "Отбеливатель",
   "item.carbonic.chloroform": "Хлороформ",
+  "item.carbonic.halite_ore": "Галит Руда",
+  "item.carbonic.salt": "Соль",
+  "item.carbonic.teflon": "Тефлон",
 
   "itemGroup.carbonic_common": "Карбоник"
 }

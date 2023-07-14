@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import world.snows.forever.carbonic.registry.BlockRegistry;
 import world.snows.forever.carbonic.registry.CreativeTabRegistry;
 import world.snows.forever.carbonic.registry.ItemRegistry;
 
@@ -19,8 +20,10 @@ public class Carbonic {
 
         LOGGER.info("Initializing Carbonic...");
 
+        BlockRegistry.BLOCK_REGISTRY.register(bus);
         ItemRegistry.ITEM_REGISTRY.register(bus);
-        CreativeTabRegistry.loadCreativeTabs(bus);
+
+        CreativeTabRegistry.TAB_REGISTRY.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

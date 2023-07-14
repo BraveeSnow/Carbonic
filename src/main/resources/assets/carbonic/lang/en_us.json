@@ -1,6 +1,11 @@
 {
+  "block.carbonic.halite_ore": "Halite Ore",
+
   "item.carbonic.bleach": "Bleach",
   "item.carbonic.chloroform": "Chloroform",
+  "item.carbonic.halite_ore": "Halite Ore",
+  "item.carbonic.salt": "Salt",
+  "item.carbonic.teflon": "Teflon",
 
   "itemGroup.carbonic_common": "Carbonic"
 }
