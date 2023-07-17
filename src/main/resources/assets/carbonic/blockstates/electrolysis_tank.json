@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "carbonic:block/electrolysis_tank"
+    },
+    "facing=east": {
+      "model": "carbonic:block/electrolysis_tank",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "carbonic:block/electrolysis_tank",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "carbonic:block/electrolysis_tank",
+      "y": 270
+    }
+  }
+}

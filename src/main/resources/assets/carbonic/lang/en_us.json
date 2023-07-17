@@ -1,8 +1,10 @@
 {
+  "block.carbonic.electrolysis_tank": "Electrolysis Tank",
   "block.carbonic.halite_ore": "Halite Ore",
 
   "item.carbonic.bleach": "Bleach",
   "item.carbonic.chloroform": "Chloroform",
+  "item.carbonic.electrolysis_tank": "Electrolysis Tank",
   "item.carbonic.halite_ore": "Halite Ore",
   "item.carbonic.salt": "Salt",
   "item.carbonic.teflon": "Teflon",

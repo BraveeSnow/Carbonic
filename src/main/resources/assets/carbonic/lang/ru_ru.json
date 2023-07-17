@@ -1,8 +1,10 @@
 {
+  "block.carbonic.electrolysis_tank": "Электролизный Бак",
   "block.carbonic.halite_ore": "Галит Руда",
 
   "item.carbonic.bleach": "Отбеливатель",
   "item.carbonic.chloroform": "Хлороформ",
+  "item.carbonic.electrolysis_tank": "Электролизный Бак",
   "item.carbonic.halite_ore": "Галит Руда",
   "item.carbonic.salt": "Соль",
   "item.carbonic.teflon": "Тефлон",

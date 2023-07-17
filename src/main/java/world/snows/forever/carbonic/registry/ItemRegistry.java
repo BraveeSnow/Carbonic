@@ -10,9 +10,6 @@ import world.snows.forever.carbonic.item.ChemicalItem;
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEM_REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, Carbonic.MOD_ID);
 
-    // Elements
-
-
     // Compounds
 
     public static final RegistryObject<Item> SALT = ITEM_REGISTRY.register("salt",

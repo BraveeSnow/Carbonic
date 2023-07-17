@@ -15,7 +15,10 @@ public class CreativeTabRegistry {
     public static final DeferredRegister<CreativeModeTab> TAB_REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Carbonic.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> CARBONIC_COMMON = TAB_REGISTRY.register("carbonic_common", () ->
-            CreativeModeTab.builder().title(Component.translatable("itemGroup.carbonic_common")).build());
+            CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.carbonic_common"))
+                    .icon(BlockRegistry.ELECTROLYSIS_TANK.get().asItem()::getDefaultInstance)
+                    .build());
 
     @SubscribeEvent
     public static void loadCommonTab(BuildCreativeModeTabContentsEvent event) {
