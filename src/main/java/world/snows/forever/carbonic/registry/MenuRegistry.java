@@ -1,9 +1,6 @@
 package world.snows.forever.carbonic.registry;
 
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.gui.screens.inventory.MenuAccess;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -26,7 +23,7 @@ public class MenuRegistry {
             .register("electrolysis_tank_menu", () -> IForgeMenuType.create(ElectrolysisTankMenu::new));
 
     @SubscribeEvent
-    public static <M extends AbstractContainerMenu, S extends Screen&MenuAccess<M>> void registerMenuScreens(FMLClientSetupEvent event) {
+    public static void registerMenuScreens(FMLClientSetupEvent event) {
         MenuScreens.register(ELECTROLYSIS_TANK_MENU.get(), ElectrolysisTankScreen::new);
     }
 }
