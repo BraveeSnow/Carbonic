@@ -46,8 +46,6 @@ public class AnimatedTexture implements IDrawableAnimated {
 
     @Override
     public void draw(GuiGraphics guiGraphics, int xOffset, int yOffset) {
-//        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-//        RenderSystem.setShaderTexture(0, this.texture);
         guiGraphics.blit(this.texture, 0, 0, xOffset, yOffset + this.currentFrame * this.width, this.width, this.width, this.width, this.height);
 
         if (this.timer.isElapsed()) {
