@@ -4,6 +4,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.RegistryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import world.snows.forever.carbonic.registry.*;
@@ -22,6 +23,7 @@ public class Carbonic {
         ItemRegistry.ITEM_REGISTRY.register(bus);
         BlockEntityRegistry.BLOCK_ENTITY_REGISTRY.register(bus);
         MenuRegistry.MENU_REGISTRY.register(bus);
+        GasRegistry.GAS_REGISTRY.create(bus, RegistryBuilder::new);
 
         CreativeTabRegistry.TAB_REGISTRY.register(bus);
 

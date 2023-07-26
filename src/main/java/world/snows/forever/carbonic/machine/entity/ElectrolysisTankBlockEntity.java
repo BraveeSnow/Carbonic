@@ -16,7 +16,7 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-import world.snows.forever.carbonic.gui.ElectrolysisTankMenu;
+import world.snows.forever.carbonic.client.gui.ElectrolysisTankMenu;
 import world.snows.forever.carbonic.registry.BlockEntityRegistry;
 
 import javax.annotation.Nonnull;

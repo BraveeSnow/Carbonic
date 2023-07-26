@@ -1,4 +1,4 @@
-package world.snows.forever.carbonic.gui;
+package world.snows.forever.carbonic.client.gui;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;

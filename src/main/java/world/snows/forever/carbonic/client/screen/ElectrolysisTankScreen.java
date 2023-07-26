@@ -8,7 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import world.snows.forever.carbonic.Carbonic;
-import world.snows.forever.carbonic.gui.ElectrolysisTankMenu;
+import world.snows.forever.carbonic.client.gui.ElectrolysisTankMenu;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 

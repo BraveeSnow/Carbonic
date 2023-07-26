@@ -56,11 +56,18 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    maven {
+        url = "https://maven.blamejared.com/"
+    }
 }
 
 dependencies {
     minecraft "net.neoforged:forge:${minecraft_version}-${forge_version}"
     minecraftLibrary "org.apache.commons:commons-math3:3.6.1"
+
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
 }
 
 tasks.named('processResources', ProcessResources).configure {

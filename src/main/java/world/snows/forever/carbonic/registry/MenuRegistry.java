@@ -11,8 +11,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import world.snows.forever.carbonic.Carbonic;
+import world.snows.forever.carbonic.client.gui.ElectrolysisTankMenu;
 import world.snows.forever.carbonic.client.screen.ElectrolysisTankScreen;
-import world.snows.forever.carbonic.gui.ElectrolysisTankMenu;
 
 @Mod.EventBusSubscriber(modid = Carbonic.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class MenuRegistry {
