@@ -1,9 +1,8 @@
 package world.snows.forever.carbonic.chemical.gas;
 
 import net.minecraft.resources.ResourceLocation;
-import world.snows.forever.carbonic.chemical.AbstractChemicalBuilder;
 
-public class GasBuilder extends AbstractChemicalBuilder<Gas> {
+public class GasBuilder implements world.snows.forever.carbonic.util.Builder<Gas> {
     private final ResourceLocation texture;
     private int tint = -1;
 

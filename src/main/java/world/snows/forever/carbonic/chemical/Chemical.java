@@ -9,10 +9,6 @@ public interface Chemical<T extends Chemical<T>> {
     @Nonnull
     T getChemical();
     @Nonnull
-    String getObjectId();
-    @Nonnull
-    MutableComponent getNamespace();
-    @Nonnull
     ResourceLocation getTexture();
 
     default int getColor() {

@@ -5,10 +5,12 @@ import mezz.jei.api.ingredients.IIngredientType;
 import mezz.jei.api.ingredients.subtypes.UidContext;
 import net.minecraft.resources.ResourceLocation;
 import world.snows.forever.carbonic.chemical.gas.Gas;
+import world.snows.forever.carbonic.registry.GasRegistry;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Objects;
 
 @ParametersAreNonnullByDefault
 public class GasIngredientHelper implements IIngredientHelper<Gas> {
@@ -27,19 +29,19 @@ public class GasIngredientHelper implements IIngredientHelper<Gas> {
     @Nonnull
     @Override
     public String getDisplayName(Gas ingredient) {
-        return ingredient.getNamespace().getString();
+        return Objects.requireNonNull(GasRegistry.GAS_REGISTRY.getIdFromChemical(ingredient)).toString();
     }
 
     @Nonnull
     @Override
     public String getUniqueId(Gas ingredient, UidContext context) {
-        return ingredient.getObjectId();
+        return Objects.requireNonNull(GasRegistry.GAS_REGISTRY.getIdFromChemical(ingredient)).toString();
     }
 
     @Nonnull
     @Override
     public ResourceLocation getResourceLocation(Gas ingredient) {
-        return new ResourceLocation(ingredient.getObjectId());
+        return Objects.requireNonNull(GasRegistry.GAS_REGISTRY.getIdFromChemical(ingredient));
     }
 
     @Nonnull
@@ -55,6 +57,6 @@ public class GasIngredientHelper implements IIngredientHelper<Gas> {
             return "Ingredient was null";
         }
 
-        return "On ingredient " + ingredient.getObjectId();
+        return "On ingredient " + Objects.requireNonNull(GasRegistry.GAS_REGISTRY.getIdFromChemical(ingredient));
     }
 }

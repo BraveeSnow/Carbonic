@@ -10,17 +10,18 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import world.snows.forever.carbonic.chemical.gas.Gas;
 import world.snows.forever.carbonic.client.jei.render.AnimatedTexture;
+import world.snows.forever.carbonic.registry.GasRegistry;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 @ParametersAreNonnullByDefault
 @OnlyIn(Dist.CLIENT)
 public class GasIngredientRenderer implements IIngredientRenderer<Gas> {
     private IDrawable texture = null;
-
 
     @Override
     public void render(GuiGraphics guiGraphics, Gas ingredient) {
@@ -35,7 +36,8 @@ public class GasIngredientRenderer implements IIngredientRenderer<Gas> {
         final int color = ingredient.getColor();
 
         RenderSystem.enableBlend();
-        RenderSystem.setShaderColor((float) ((color >> 24) & 0xFF) / 255, (float) ((color >> 16) & 0xFF) / 255, (float) ((color >> 8) & 0xFF) / 255, (float) (color & 0xFF) / 255);
+        RenderSystem.setShaderColor((float) ((color >> 24) & 0xFF) / 255, (float) ((color >> 16) & 0xFF) / 255,
+                (float) ((color >> 8) & 0xFF) / 255, (float) (color & 0xFF) / 255);
         texture.draw(guiGraphics);
 
         RenderSystem.disableBlend();
@@ -45,6 +47,6 @@ public class GasIngredientRenderer implements IIngredientRenderer<Gas> {
     @Nonnull
     @Override
     public List<Component> getTooltip(Gas ingredient, TooltipFlag tooltipFlag) {
-        return List.of(ingredient.getNamespace());
+        return List.of(GasRegistry.GAS_REGISTRY.getTranslatableComponent(ingredient));
     }
 }
