@@ -1,6 +1,5 @@
 package world.snows.forever.carbonic.chemical;
 
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 
 import javax.annotation.Nonnull;

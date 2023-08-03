@@ -1,6 +1,5 @@
 package world.snows.forever.carbonic.chemical.gas;
 
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import world.snows.forever.carbonic.chemical.Chemical;
 import world.snows.forever.carbonic.registry.GasRegistry;

@@ -16,7 +16,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 
 @ParametersAreNonnullByDefault
 @OnlyIn(Dist.CLIENT)
