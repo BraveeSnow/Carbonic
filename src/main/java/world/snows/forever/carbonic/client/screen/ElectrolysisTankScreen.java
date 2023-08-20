@@ -15,7 +15,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 public class ElectrolysisTankScreen extends AbstractContainerScreen<ElectrolysisTankMenu> {
     private static final ResourceLocation SCREEN_TEXTURE = new ResourceLocation(Carbonic.MOD_ID,
-            "textures/gui/electrolysis_tank_gui.png");
+            "textures/gui/electrolysis_tank.png");
 
     private final ElectrolysisTankMenu menu;
 
